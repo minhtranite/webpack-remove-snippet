@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-prettier"
+  ],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "declaration-empty-line-before": null,
+    "at-rule-empty-line-before": [
+      "always", {
+        "ignore": ["after-comment", "inside-block", "blockless-after-blockless"]
+      }
+    ],
+    "rule-empty-line-before": [
+      "always", {
+        "ignore": ["after-comment", "inside-block"]
+      }
+    ],
+    "no-descending-specificity": null
+  }
+}

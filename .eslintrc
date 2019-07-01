@@ -1,0 +1,50 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "plugin:prettier/recommended",
+    "prettier/react"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "settings":{
+    "import/resolver": "webpack"
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": "off",
+    "import/extensions": "off",
+    "import/no-cycle": "off",
+    "no-param-reassign": ["error", {"ignorePropertyModificationsFor": ["draft"]}],
+    "react/jsx-filename-extension": "off",
+    "react/prefer-stateless-function": "off",
+    "react/forbid-prop-types": ["error", {"forbid": ["any", "array"]}],
+    "react/no-array-index-key": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error", {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight", "to"],
+        "aspects": ["noHref", "invalidHref", "preferButton"]
+      }
+    ],
+    "jsx-a11y/label-has-for": [
+      "error", {
+        "components": ["Label"],
+        "required": {
+          "some": ["nesting", "id"]
+        },
+        "allowChildren": false
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/jsx-no-target-blank": "off",
+    "react/destructuring-assignment": "off"
+  },
+  "globals": {
+    "describe": true,
+    "test": true,
+    "expect": true
+  }
+}
